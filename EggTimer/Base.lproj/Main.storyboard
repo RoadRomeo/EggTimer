@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="EggTimer" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Utd-XA-nia">
+                                <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                                <items>
+                                    <navigationItem title="EggTimer" id="v0E-Ly-PSl">
+                                        <barButtonItem key="leftBarButtonItem" systemItem="play" id="i9d-27-SZw">
+                                            <connections>
+                                                <action selector="play:" destination="BYZ-38-t0r" id="pXW-wT-vHF"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" systemItem="pause" id="0si-Hu-r7x">
+                                            <connections>
+                                                <action selector="pause:" destination="BYZ-38-t0r" id="tJD-Mr-bji"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="crL-n5-vfm">
+                                <rect key="frame" x="0.0" y="524" width="320" height="44"/>
+                                <items>
+                                    <barButtonItem title="-10" id="7Ov-lU-bNT">
+                                        <connections>
+                                            <action selector="minusTen:" destination="BYZ-38-t0r" id="Qls-Ls-pFd"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="u7q-uu-8fR"/>
+                                    <barButtonItem title="Reset" id="7vI-VM-5EJ">
+                                        <connections>
+                                            <action selector="reset:" destination="BYZ-38-t0r" id="0jr-65-90W"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="G71-aB-kYJ"/>
+                                    <barButtonItem title="+10" id="XE6-Ab-oyN">
+                                        <connections>
+                                            <action selector="plusTen:" destination="BYZ-38-t0r" id="8hW-9F-Ver"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="210" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y85-RR-n6g">
+                                <rect key="frame" x="90" y="230" width="140" height="107"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="31"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="crL-n5-vfm" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="6Gl-yp-PCU"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="crL-n5-vfm" secondAttribute="trailing" constant="-20" id="FD3-yp-xn1"/>
+                            <constraint firstItem="crL-n5-vfm" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="Hej-lR-qlp"/>
+                            <constraint firstItem="Utd-XA-nia" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="LmA-B7-vxB"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="crL-n5-vfm" secondAttribute="bottom" id="PXe-vW-EYJ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Utd-XA-nia" secondAttribute="trailing" constant="-20" id="bEz-SO-d0R"/>
+                            <constraint firstItem="Utd-XA-nia" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="fbz-Ch-sjb"/>
+                            <constraint firstItem="y85-RR-n6g" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="hl1-p3-rRX"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="crL-n5-vfm" secondAttribute="bottom" id="iOX-FX-8fp"/>
+                            <constraint firstItem="Utd-XA-nia" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="oWa-ss-Huo"/>
+                            <constraint firstItem="y85-RR-n6g" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="ptW-An-KVw"/>
+                            <constraint firstItem="Utd-XA-nia" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="vyv-lT-hnp"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="result" destination="y85-RR-n6g" id="97b-SB-hV7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="46" y="391"/>
+        </scene>
+    </scenes>
+</document>
